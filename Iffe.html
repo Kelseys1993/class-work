@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<p id='demo'></p>
+
+
+
+
+
+
+
+	<script>
+
+	
+
+		// (function(){
+		// 		var configObj = {
+		// 				option1: 123,
+		// 				option2:456
+		// 			};
+		// 	function myFunction(){
+
+		// 			console.log(newFunction())
+
+		// 			return configObj.option1;
+				
+		// 		}
+
+		// 			console.log(myFunction());
+
+		// 	function newFunction(){
+
+		// 			var total = configObj.option1 * configObj.option2;
+		// 			return total;
+		// 		}
+			
+		// })();
+
+		//declaratiosns can be invoked from either above or below
+		//this is known as hoisting
+		 
+
+		var text;
+
+		switch (new Date().getDay()){
+			case 6:
+				text = 'today is Saturday;'
+				break;
+			case 0:
+				text = 'Today is Sunday'
+				break;
+			default:
+				text = 'Looking forward to the weekend'
+				break;
+
+			}
+			console.log(new Date());
+
+			document.getElementById('demo').innerHTML = text;
+
+		
+
+
+	</script>
+	
+</body>
+</html>

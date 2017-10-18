@@ -46,6 +46,9 @@ function addHeights (heightA, heightB, heightC, heightD){
 
 }
 
+
+// var allHeights = addHeights(measurements.a, measurements.b, measurements.c, measurements.d,measurements.e);
+
 var heightMeaurements = addHeights(measurements[0], measurements[1], measurements[2], measurements[3], measurements[4]);
 
 function averageHeight(){
@@ -55,15 +58,22 @@ function averageHeight(){
 
 
 }
-
+//Iife it provides a local scope or private scope
+//keep things out of global environment stop errors with naming conventions
 (function(){
+
 	console.log('hello');
 
 })();
 
+// variables inside a function are not gobal
+//variables outside of a function are global
+//and can be accesed from anywhere 
+
+//function expression can trigger itselg
+//function declaration needs a triggger
 
 
-// var allHeights = addHeights(measurements.a, measurements.b, measurements.c, measurements.d,measurements.e);
 
 
 
