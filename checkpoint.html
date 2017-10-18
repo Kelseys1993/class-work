@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<h1>What is the average height?</h1>
+	
+	<div id='all'></div>
+	<div id='sizeChart'></div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+
+	// var measurements = {
+	// 	a: 122,
+	// 	b: 188,
+	// 	c: 160,
+	// 	d: 177,
+	// 	e: 4
+	//};
+
+
+var measurements = [122, 188, 160, 177,'red']
+
+
+
+function allHeights(){
+	var elall = document.getElementById('all');
+	elall.textContent = 'Heights: ' + measurements[0] + ',  ' + measurements[1]+ ', ' + measurements[2] + ', ' + measurements[3];
+
+		var fontColor = $('h1').css('color', measurements[4]);
+}
+
+
+function addHeights (heightA, heightB, heightC, heightD){
+	
+	var total = (heightA + heightB + heightC + heightD) /4;
+
+	return total;
+	
+
+}
+
+var heightMeaurements = addHeights(measurements[0], measurements[1], measurements[2], measurements[3], measurements[4]);
+
+function averageHeight(){
+	var newTotal = heightMeaurements;
+	var elSizeChart = document.getElementById('sizeChart');
+	elSizeChart.textContent = 'Average height: ' + newTotal;
+
+
+}
+
+(function(){
+	console.log('hello');
+
+})();
+
+
+
+// var allHeights = addHeights(measurements.a, measurements.b, measurements.c, measurements.d,measurements.e);
+
+
+
+console.log(heightMeaurements);
+console.log(measurements);
+averageHeight();
+allHeights();
+
+
+
+
+	</script>
+	
+</body>
+</html> 

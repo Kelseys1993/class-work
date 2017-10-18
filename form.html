@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+<style>
+	
+	.form{
+		background-color: lightgrey;
+		width: 500px;
+		height: 150px;
+	}
+	#return-trip{
+		margin-top: 10px;
+			}
+	
+</style>
+</head>
+<body>
+<div class="form">
+
+	<h1> Book A Trip</h1>
+	<form> 
+ 	<input type="radio" name="Return Trip" id="return-trip">
+    <label for="male">Return Trip</label>
+    <input type="radio" name="One way" id="one-way">
+    <label for="female">One Way</label>
+</form>
+	<form>
+		<label for="From" id="from">From</label>
+		<input type="text" name="From">
+		<label for="To" id="to">To</label>
+		<input type="text" name="To">
+	</form>
+		<label for="Adults">Adults:</label>
+    	<select name="adults" id="adults">
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+       </select>
+
+        <label for="Children">Children (2-11 years old)</label>
+    	<select name="children" id="children">
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+    </select>
+	</form>
+</div>
+	
+</body>
+</html>
