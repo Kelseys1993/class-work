@@ -6,7 +6,7 @@
 </head>
 <body>
 
-
+	<h2>Grocery Items</h2>
 	<p id='demo'></p>
 
 
@@ -45,22 +45,32 @@
 		//declaratiosns can be invoked from either above or below
 		//this is known as hoisting
 		 
-
+		var groceryItem = 'Apples'
+		
 		var text;
 
-		switch (new Date().getDay()){
-			case 6:
-				text = 'today is Saturday;'
+		switch (groceryItem){
+			case 'Apples' :
+				text = 'Apples are: $3.5kg'
 				break;
-			case 0:
-				text = 'Today is Sunday'
+			case 'Washing Powder':
+				text = 'Washing Powder is: $4ea'
+				break;
+			case 'Museli':
+				text = 'Museli bars are: $5ea'
+				break;
+			case 'Baked Beans':
+				text = 'Baked Beans are: $2.5ea'
+				break;
+				case 'Carrots':
+				text = 'Carrots are: $3kg'
 				break;
 			default:
-				text = 'Looking forward to the weekend'
+				text = 'Invalid item'
 				break;
 
 			}
-			console.log(new Date());
+			console.log(groceryItem);
 
 			document.getElementById('demo').innerHTML = text;
 
