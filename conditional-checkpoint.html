@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	
+	.box{
+	width:200px;
+	height:200px;
+}
+#box1{
+	background-color: green;
+}
+</style>
+<body>
+
+
+
+<div class='box' id="box1"></div>
+<p id='words'></p>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+
+	//The function that will be used for the  conditional 
+	function myFunction(){
+		$(document).ready(function(){
+
+				$("#box1").click(function(){
+				$("#box1").hide(4000).show(4000);
+		});
+
+	});
+
+	}
+
+
+
+var text;
+
+
+// if magic is greater than or equal to value then myFunction will be invoked
+if ( 900 >= 600 || 900 === 900 ){
+	//invoking myFunction if statement is true
+	myFunction();
+	text = 'Click me for some magic!'
+
+	//if its not then myFunction will not be invoked 
+	//and the text will say not for muggles
+} else {
+	text = 'Not for Muggles'
+}
+	var el = document.getElementById('words');
+	el.innerHTML = text;
+	</script>
+	
+
+
+	
+</body>
+</html>

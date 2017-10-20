@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	
+	.box{
+	width:200px;
+	height:200px;
+}
+#box1{
+	background-color: green;
+}
+</style>
+<body>
+
+
+<div class='box' id="box1"></div>
+<p id='words'></p>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+
+		// var a,b,c,d,e,f; 
+		// a = 5;
+		// b = 7;
+		// c = 10;
+		// d = 55;
+		// e = 'a string';
+		// f = 10;
+
+
+
+		// // var myArray = [5,7,10,55, 'string', 10];
+
+		// console.log((b >= a) && (c == f));
+
+
+
+
+		// var a = 'string';
+		// var b = 22;
+		// var c = true;
+
+
+		// console.log((22 <= 26));
+
+		// if(22 <= 26){
+		// 	alert('Your Fired!')
+
+		// }
+		
+function myFunction(){
+$(document).ready(function(){
+
+		$("#box1").click(function(){
+		$("#box1").hide(4000).show(4000);
+});
+
+});
+
+}
+
+var magic = 900;
+var text;
+
+if (magic >= 900 ){
+	myFunction();
+	text = 'Click me for some magic!'
+} else {
+	text = 'Not for Muggles'
+}
+var el = document.getElementById('words');
+el.innerHTML = text;
+	</script>
+	
+
+
+
+
+</body>
+</html>

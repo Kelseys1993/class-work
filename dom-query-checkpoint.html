@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Template</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<h1 style="padding-left: 1em;">A List</h1>
+	<p id="para"></p>
+	<ul id="bigList">
+		<li class="red">red</li>
+		<li id="another">another</li>
+		<li class="hot">hot</li>
+		<li class="blue">blue</li>
+		<li class="green">green</li>
+		<li id="new">new</li>
+		<li class="hot">hot number 2</li>
+	</ul>
+
+	<script>
+
+
+		//Iiffe Starts ***
+		(function(){
+			// This function gets the element id 'another' 
+			//and changes its color
+			function domQueryA(parameter){
+				var el = document.getElementById('another');
+				el.style.color = parameter;
+			}
+			// This function gets the elemt by the class name 'hot'
+			// it then cahnges the font size
+			function domQueryB(size){
+				var el = document.getElementsByClassName('hot');
+				el[0].style.fontSize = size;
+				el[1].style.fontSize = size;
+				
+			}
+			//this function getst the element by tag name 'li'
+			//it then changes the background color of the 3rd
+			//item in the array 
+			function domQueryC(){
+				var el = document.getElementsByTagName('li');
+				el[0].style.backgroundColor ='lightgreen';
+				el[1].style.backgroundColor ='lightblue';
+				el[2].style.backgroundColor ='pink';
+				el[3].style.backgroundColor ='lightgrey';
+				el[4].style.backgroundColor ='orange';
+				el[5].style.backgroundColor ='yellow';
+				el[6].style.backgroundColor ='slategrey';
+
+			}				
+				
+			domQueryA('green');
+			domQueryB('30px');
+			domQueryC();
+
+		})()
+		//Iiffe ends ***
+		
+	
+
+
+		
+	
+
+	
+	</script>
+</body>
+</html>
