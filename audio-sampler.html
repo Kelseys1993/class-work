@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+		
+
+
+		.box{
+			width: 200px;
+			height: 200px;
+			margin-top: 20px;
+			margin-left:20px;
+			display: inline-block;
+
+		}
+		#box1{
+			background-color: blue;
+			
+		}
+		#box2{
+			background-color: red;
+		
+		}#box3{
+			background-color: green;
+			
+		}
+</style>
+<body>
+
+
+
+		<div id="box1" class="box"></div>
+		<div id="box2" class="box"></div>
+		<div id="box3" class="box"></div>
+	
+
+	<script>
+
+	init();
+
+		//This function is a function expression
+		var createAudio = function(){
+	
+			window.newAudioA = new Audio();
+			newAudioA.src = 'a.wav';
+
+			window.newAudioB = new Audio();
+			newAudioB.src = 'b.wav';
+
+			window.newAudioC = new Audio();
+			newAudioC.src = 'c.wav';
+
+		}();
+
+		//This function is a function declaration
+		function init(){
+
+			var playButtonA = document.getElementById('box1');
+			playButtonA.addEventListener('click', playAudioA, false);
+
+			var playButtonB = document.getElementById('box2');
+			playButtonB.addEventListener('click', playAudioB, false);
+
+			var playButtonC = document.getElementById('box3');
+			playButtonC.addEventListener('click', playAudioC, false);
+
+
+
+		}
+
+		function playAudioA(){
+			newAudioA.play()
+				
+			}
+
+		function playAudioB(){
+			newAudioB.play()
+				
+			}
+
+
+		function playAudioC(){
+			newAudioC.play()
+			}
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

@@ -30,26 +30,38 @@
 				el.style.color = parameter;
 			}
 		// 	// This function gets the elemt by the class name 'hot'
-		// 	// it then cahnges the font size
+		// 	// it then changes the font size
 			function domQueryB(size){
 				var el = document.getElementsByClassName('hot');
 				el[0].style.fontSize = size;
 				el[1].style.fontSize = size;
 				
 			}
-		// 	//this function getst the element by tag name 'li'
+		// 	//this function gets the element by tag name 'li'
 		// 	//it then changes the background color of the 3rd
 		// 	//item in the array 
-			function domQueryC(){
-				var el = document.getElementsByTagName('li');
-				for ( var i = 0; i < el.length; i++) {
-				el[i].style.backgroundColor ='lightgreen';
-			}
+
+		function domQueryC(){
+ 			var el = document.getElementsByTagName('li');
+			el[0].style.backgroundColor ='lightgreen';
+			el[1].style.backgroundColor ='lightblue';
+ 			el[2].style.backgroundColor ='pink';
+ 			el[3].style.backgroundColor ='lightgrey';
+ 			el[4].style.backgroundColor ='orange';
+ 			el[5].style.backgroundColor ='yellow';
+ 			el[6].style.backgroundColor ='slategrey';
+		}
+			// function domQueryC(){
+			// 	var el = document.getElementsByTagName('li');
+			// 	for ( var i = 0; i < el.length; i++) {
+			// 	el[i].style.backgroundColor ='lightgreen';
+			// }
 			
 
-			}				
 				
-			domQueryA('green');
+
+				
+			domQueryA('orange');
 			domQueryB('30px');
 			domQueryC();
 
@@ -58,25 +70,25 @@
 		//Iiffe ends ***
 
 
-let thingsToDo = ['do laundry', 'take out the garbage', 'make dinner', 'walk the dog', 'go to the bank'];
-let thingsFinished = ['do laundry', 'wash dishes', 'clean lounge'];
+// let thingsToDo = ['do laundry', 'take out the garbage', 'make dinner', 'walk the dog', 'go to the bank'];
+// let thingsFinished = ['do laundry', 'wash dishes', 'clean lounge'];
 
-for (let thingsToDoIndex = 0;  thingsToDoIndex < thingsToDo.length; thingsToDoIndex++) 
-{
+// for (let thingsToDoIndex = 0;  thingsToDoIndex < thingsToDo.length; thingsToDoIndex++) 
+// {
  
-  for ( let thingsFinishedIndex = 0; thingsFinishedIndex < thingsFinished.length; thingsFinishedIndex++)
-  {
-	if( thingsToDo[thingsToDoIndex] === 			thingsFinished[thingsFinishedIndex]){
-    console.log( thingsToDo[thingsToDoIndex] + ': I can tick that off the list ' );
-  }
-}
-}
+//   for ( let thingsFinishedIndex = 0; thingsFinishedIndex < thingsFinished.length; thingsFinishedIndex++)
+//   {
+// 	if( thingsToDo[thingsToDoIndex] === 			thingsFinished[thingsFinishedIndex]){
+//     console.log( thingsToDo[thingsToDoIndex] + ': I can tick that off the list ' );
+//   }
+// }
+// }
 
-while (thingsToDo.length > 4) {
-  thingsToDo.pop();
-   console.log('I have too many things to do!');
+// while (thingsToDo.length > 4) {
+//   thingsToDo.pop();
+//    console.log('I have too many things to do!');
 
- }
+//  }
 
 	
 	
