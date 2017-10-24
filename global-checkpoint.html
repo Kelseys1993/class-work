@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<p id="one"></p>
+
+	<p id="two"></p>
+	
+	<script>
+
+		(function(){
+
+			function myFunction (stringWords){
+				var maths = Math.sqrt(200);
+				document.getElementById('one').innerHTML = stringWords + maths;
+
+			}
+			myFunction('What is the square root of 200? ')
+
+			function myFunction2(idName){
+				var dates = new Date();
+				document.getElementById(idName).innerHTML = 'What year are we in ? ' + dates.getFullYear();
+			}
+			
+			myFunction2('two')
+		})();
+
+
+
+
+
+	</script>
+</body>
+</html>
