@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+</head>
+<body>
+
+
+	
+	<h1 id='another'>Hello</h1>
+	<!-- <h1 id='demo'>Hello World</h1> -->
+
+
+	<script>
+
+	// var myArray = ['apples ', 'bananas ', 'grapes ', 'oranges ']
+	// var arrayLength = myArray.length;
+	
+
+	// for (i = 0; i < arrayLength; i++){
+	// 	document.write(myArray[i]);
+	// }
+
+
+(function(){
+
+	setTimeout(function domQueryA(){
+
+			 var myArray = ['blue','pink', 'orange', 'green', 'purple'];
+			  myArray.push('red');
+			  console.log(myArray);
+
+			 for (var i = 0; i < myArray.length; i++) {
+			
+			 var el = document.getElementById('another');
+			 el.style.color = myArray[i];
+				}
+			 }, 3000);
+
+
+	
+
+	
+
+})()
+
+
+
+	</script>
+	
+</body>
+</html>
