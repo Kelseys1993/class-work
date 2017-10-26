@@ -11,6 +11,7 @@
 
 	
 	<h1 id='another'>Hello</h1>
+	
 	<!-- <h1 id='demo'>Hello World</h1> -->
 
 
@@ -30,15 +31,24 @@
 	setTimeout(function domQueryA(){
 
 			 var myArray = ['blue','pink', 'orange', 'green', 'purple'];
+<<<<<<< HEAD
 			  myArray.push('red');
 			  console.dir(myArray);
+=======
+			 var newArray = [];
+			  console.log(myArray);
+>>>>>>> b84173fe190afec602c1341993ddf1f94c28eb29
 
-			 for (var i = 0; i < myArray.length; i++) {
+			 for (var i = 0, max=myArray.length; i<max; i++) {
+			 	newArray.push(myArray[3]);
 			
-			 var el = document.getElementById('another');
-			 el.style.color = myArray[i];
-				}
+				 var el = document.getElementById('another');
+				 el.style.color = newArray;
+					}
+				console.log(newArray);
 			 }, 3000);
+
+
 
 
 	
@@ -47,6 +57,23 @@
 
 })()
 
+	var shoppingCart = [
+				 {item: `soap`, price: 4.99},
+				{item: `hammer`, price: 19.60},
+				{item: `tissues`, price: 2.95},
+				];
+
+	//we want to create an array of prices only
+	//i.e data conversion/re-structuring
+
+	var prices = [];
+
+	for (var i = 0, length = shoppingCart.length; i < length; i++) {
+	prices.push(shoppingCart[i].price);
+	}
+											 
+	console.log(prices); // [4.99, 19.60, 2.95]
+										
 
 
 	</script>
