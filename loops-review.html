@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body class="blue">
+
+	<p class='loremP'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae provident nam, magni iure numquam mollitia labore, modi, commodi quis recusandae sequi nostrum impedit? Vel perspiciatis voluptatem, fugit sapiente laborum provident.</p>
+	<p class='loremP'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores totam nostrum architecto, eaque explicabo! Nostrum, id deserunt dolore maxime soluta laudantium itaque, quisquam necessitatibus magnam explicabo, laborum labore, ea eaque!</p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<h1>Hello</h1>
+	<h2>Oranges</h2>
+	<ul>
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+		<li>five</li>
+	</ul>
+
+	<script>
+
+		//Breakdown of the for condition: 
+		// for ([initialExpression]; [condition]; [incrementExpression])
+		// var step;
+		// for  (step = 0; step < 5; step++){
+		// 	console.log('Walking east one step');
+		// }
+
+		// var all = document.getElementsByTagName("*")
+		// console.dir(all);;
+		// for (var i=0, max=all.length; i < max; i++) {
+		// 	all[i].style.color = 'blue';
+		// }
+
+
+
+		var para = document.getElementsByClassName('loremP')
+
+		for (var i=0, max= para.length; i < max; i++) {
+			para[i].style.color = 'green';
+		}
+
+		var list = document.getElementsByTagName('li')
+
+		for ( var i=0, max=list.length; i < max; i++){
+			list[3].innerHTML = 'hey';
+		}
+
+
+
+	</script>
+	
+</body>
+</html>
