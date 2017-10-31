@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<style>
+		#box{
+			margin: 0 auto;
+			margin-top: 200px;
+			background-color: blue;
+			width: 400px;
+			height: 400px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id='box'></div>
+
+	<script>
+
+
+		(function(){
+
+
+			init();
+
+			var el = document.getElementById('box'); 
+			var back = document.getElementsByTagName('body')
+		
+			
+			function changeColor(){
+				back[0].style.transition = '3000ms';
+				back[0].style.backgroundColor = 'black';
+			}
+
+			
+
+			function changeBox(){
+				el.style.transition = '3000ms';
+				el.style.backgroundColor = 'red';
+			}
+
+			function init (){
+			var el = document.getElementById('box'); 
+			el.addEventListener('mouseover', changeColor, [false]);
+			el.addEventListener('mouseout', changeBox, [false]);
+			}
+		
+		})()
+
+	</script>
+	
+</body>
+</html>
