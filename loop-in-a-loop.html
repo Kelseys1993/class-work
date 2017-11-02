@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+	<script>
+
+	
+
+(function(){
+
+	setTimeout(function domQueryA(){
+
+
+			var myArray = ['blue','pink', 'orange', 'green', 'purple']
+			console.log(myArray);
+
+			var newArray = [];
+
+			var headings = document.getElementsByClassName('another');
+
+
+
+			for (var i = 0, max=headings.length; i<max; i++) {
+				
+				newArray.push(myArray[3]);
+				console.log(newArray);
+			for ( var i =0, max=headings.length; i<max; i++) {
+					
+					headings[i].style.color = newArray;
+			}
+				}
+					
+		
+			 }, 3000);
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

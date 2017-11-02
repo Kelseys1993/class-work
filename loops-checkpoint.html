@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>loops</title>
 	
-</head>
 <body>
 
 
@@ -27,9 +25,32 @@
 	// }
 
 
+// (function(){
+
+// 	setTimeout(function domQueryA(){
+
+// 			//This is getting the class name another
+// 			var headings = document.getElementsByClassName('another');
+
+
+// 			// this is looping through the elements with class name another
+// 			for ( var i =0, max=headings.length; i<max; i++) {
+// 					//each loop it changes the colour of the element to green
+// 					headings[i].style.color = 'green';
+// 				}
+					
+		
+// 			 }, 3000);
+
+
+// })()
+
+
+
 (function(){
 
 	setTimeout(function domQueryA(){
+
 
 			var myArray = ['blue','pink', 'orange', 'green', 'purple']
 			console.log(myArray);
@@ -39,21 +60,27 @@
 			var headings = document.getElementsByClassName('another');
 
 
+
 			for (var i = 0, max=myArray.length; i<max; i++) {
 				
 				newArray.push(myArray[3]);
-
+				console.log(newArray);
 			for ( var i =0, max=headings.length; i<max; i++) {
 					
 					headings[i].style.color = newArray;
+			}
 				}
-					console.log(newArray);
-				}
+					
+		
 			 }, 3000);
 
 
 })()
 
+
+
+
+// })()
 	// var shoppingCart = [
 	// 			 {item: `soap`, price: 4.99},
 	// 			{item: `hammer`, price: 19.60},

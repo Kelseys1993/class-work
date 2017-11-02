@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>events</title>
+	
+</head>
+	<style>
+	#box{
+		background-color: blue;
+		width: 400px;
+		height: 400px;
+		padding-top: 10px;
+		margin: 0 auto;
+		
+	}
+
+
+	</style>
+<body>
+
+
+	<div id='box'></div>
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+
+	(function(){
+
+		var el = document.getElementById('box');
+
+		function changeColour(){
+			el.style.transition = '1000ms';
+			el.style.backgroundColor = 'black'
+			
+			
+		}
+		el.onmouseover = changeColour;
+	
+		
+		function changeAgain(){
+		el.style.transition = '1000ms';
+			el.style.backgroundColor = 'red'
+		}
+		el.onmouseout = changeAgain;
+	})()
+
+
+
+
+	</script>
+	
+</body>
+</html>
