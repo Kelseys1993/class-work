@@ -25,7 +25,6 @@
 		(function(){
 
 
-			init();
 
 			var el = document.getElementById('box'); 
 			var back = document.getElementsByTagName('body')
@@ -43,12 +42,12 @@
 				el.style.backgroundColor = 'red';
 			}
 
-			function init (){
-			var el = document.getElementById('box'); 
+			function init (){ 
 			el.addEventListener('mouseover', changeColor, false);
 			el.addEventListener('mouseout', changeBox, false);
 			}
-		
+			
+			init();
 		})()
 
 	</script>

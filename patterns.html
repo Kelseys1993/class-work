@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+
+	<script>
+	 	(function(){
+	 		// Setup config/cloud object
+	 		var config = {};
+
+
+		 	function makeMessage(myMessage){
+		 		config.msg = myMessage;
+		 		shoutSomething();
+		 	}
+
+		 	makeMessage('hello Kelsey');
+		 	
+
+		 	
+		 	function shoutSomething(){
+	 			alert(config.msg);
+	 		}
+
+	 		
+
+		 	console.log(config);
+
+	 	})()
+
+
+
+
+
+	</script>
+	
+</body>
+</html>
