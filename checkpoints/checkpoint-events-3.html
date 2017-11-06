@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+
+	body{
+		height: 2000px;
+		
+	}
+
+	.styles{
+		background-color: green;
+		width: 300px;
+		height: 300px;
+		border-radius: 200px;
+		margin: 0 auto;
+		margin-top: 100px;
+		position: relative;
+		
+
+	}
+	#circle2{
+		background-color: black;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 20px;
+
+	}
+	.btn{
+		width: 100px;
+	}
+	
+	.wrapper{
+		margin: 0 auto;
+		margin-top: 50px;
+		width:520px;
+	}
+	</style>
+</head>
+<body>
+ 
+	
+	<div class="styles" id="circle">
+		<div class="styles" id="circle2"></div>
+	</div>
+	
+	<div class="wrapper">
+		<button id="btn1" class="btn btn-primary">1</button>
+		<button id="btn2" class="btn btn-primary">2</button>
+		<button id="btn3" class="btn btn-primary">3</button>
+		<button id="btn4" class="btn btn-primary">4</button>
+		<button id="btn5" class="btn btn-primary">5</button>
+	</div>
+
+<script>
+	(function(){	
+
+		var shape = document.getElementById('circle');
+		var one = document.getElementById('btn1');
+		var two = document.getElementById('btn2');
+		var three = document.getElementById('btn3');
+		var four = document.getElementById('btn4');
+		var five = document.getElementById('btn5');
+		
+		console.dir(one);
+
+		function init(){
+			one.addEventListener('click',functionOne, false);
+			two.addEventListener('click',functionOne, false);
+			three.addEventListener('click',functionOne, false);
+			four.addEventListener('click',functionOne, false);
+			five.addEventListener('click',functionOne, false);
+		}
+		init()
+		
+		 function functionOne(){
+		 	window.addEventListener('scroll', functionTwo, false);
+		 }
+
+		 function functionTwo(){
+			
+		 	circle.style.transform = 'rotate(360deg)';
+		 	circle.style.transition = '3000ms';
+		}
+	})();
+
+</script>
+	
+</body>
+</html>
