@@ -7,7 +7,9 @@
 	<style>
 
 	body{
-		height: 2000px;
+		height: 800px;
+
+
 		
 	}
 
@@ -44,7 +46,7 @@
 <body>
  
 	
-	<div class="styles" id="circle">
+	<div class="styles" id="shape">
 		<div class="styles" id="circle2"></div>
 	</div>
 	
@@ -59,35 +61,94 @@
 <script>
 	(function(){	
 
-		var shape = document.getElementById('circle');
+		var circle = document.getElementById('shape');
 		var one = document.getElementById('btn1');
 		var two = document.getElementById('btn2');
 		var three = document.getElementById('btn3');
 		var four = document.getElementById('btn4');
 		var five = document.getElementById('btn5');
 		
-		console.dir(one);
-
+	
 		function init(){
 			one.addEventListener('click',functionOne, false);
-			two.addEventListener('click',functionOne, false);
-			three.addEventListener('click',functionOne, false);
-			four.addEventListener('click',functionOne, false);
-			five.addEventListener('click',functionOne, false);
+			two.addEventListener('click',functionThree, false);
+			three.addEventListener('click',functionFive, false);
+			four.addEventListener('click',functionSeven, false);
+			five.addEventListener('click',functionNine, false);
+
+			
 		}
 		init()
 		
 		 function functionOne(){
-		 	window.addEventListener('scroll', functionTwo, false);
+		 	circle.addEventListener('mousewheel', functionTwo, false);
 		 }
 
 		 function functionTwo(){
 			
 		 	circle.style.transform = 'rotate(360deg)';
-		 	circle.style.transition = '3000ms';
-		}
-	})();
+		 	circle.style.transition = '5000ms';
 
+			setTimeout(function(){	
+			window.location.reload();
+			},5000);
+		}
+
+
+		function functionThree(){
+		 	circle.addEventListener('mousewheel', functionFour, false);
+		 }
+
+		 function functionFour(){
+			
+		 	circle.style.transform = 'rotate(720deg)';
+		 	circle.style.transition = '5000ms';
+		 	setTimeout(function(){
+			window.location.reload();
+			},5000);
+		}
+		function functionFive(){
+		 	circle.addEventListener('mousewheel', functionSix, false);
+		 }
+
+		 function functionSix(){
+			
+		 	circle.style.transform = 'rotate(1080deg)';
+		 	circle.style.transition = '5000ms';
+		 	setTimeout(function(){
+			window.location.reload();
+			},5000);
+		}
+		function functionSeven(){
+		 	circle.addEventListener('mousewheel', functionEight, false);
+		 }
+
+		 function functionEight(){
+			
+		 	circle.style.transform = 'rotate(1440deg)';
+		 	circle.style.transition = '8000ms';
+		 	setTimeout(function(){
+			window.location.reload();
+			},8000);
+		}
+
+		function functionNine(){
+		 	circle.addEventListener('mousewheel', functionTen, false);
+		 }
+
+		 function functionTen(){
+			
+		 	circle.style.transform = 'rotate(1800deg)';
+		 	circle.style.transition = '8000ms';
+		 	setTimeout(function(){
+			window.location.reload();
+			},8000);
+		}
+		
+
+
+
+	})();
 </script>
 	
 </body>
