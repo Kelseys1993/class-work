@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<style>
+	#wrapper{
+		margin-left:50px;
+	}
+	.input-field {
+		width: 30%;
+
+	}
+	.s6{
+		width: 80%;
+	}
+	.select-dropdown{
+		left:10px;
+	}
+	#textarea1{
+
+	}
+	.waves-effect{
+		margin-left:200px;
+
+	}
+	</style>
+	
+</head>
+<body>
+	<div id="wrapper">
+		 <div class="row">
+	        <div class="input-field col s3" id='myForm'>
+	          <input id="email" type="email" class="validate">
+	          <label for="email">Email</label>
+	        </div>
+	      </div>
+
+	  <div class="input-field col s12" id='myForm'>
+	    <select>
+	      <option value="" disabled selected>Choose your option</option>
+	      <option value="1">Option 1</option>
+	      <option value="2">Option 2</option>
+	      <option value="3">Option 3</option>
+	    </select>
+	    <label>Materialize Select</label>
+	  </div>
+	   <div class="input-field col s12" id='myForm'>
+	    <select multiple>
+	      <option value="" disabled selected>Choose your option</option>
+	      <option value="1">Option 1</option>
+	      <option value="2">Option 2</option>
+	      <option value="3">Option 3</option>
+	    </select>
+	    <label>Materialize Multiple Select</label>
+	  </div>
+	  <div class="row">
+	    <form class="col s6">
+	      <div class="row">
+	        <div class="input-field col s6" id='myForm'>
+	          <textarea id="textarea1" class="materialize-textarea"></textarea>
+	          <label for="textarea1">Textarea</label>
+	        </div>
+	      </div>
+	    </form>
+	  </div>
+	  <a class="waves-effect waves-light btn" id="subBtn">Submit</a>
+</div>
+
+
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script> 
+
+		  $(document).ready(function() {
+		    $('select').material_select();
+		      });
+
+
+		  	var obj ={};
+
+		var init = function(){
+			var btn = document.getElementById('subBtn');
+			btn.addEventListener('click', myFunction, false);	
+			
+		}();
+
+
+		// Scan forms
+		function myFunction() {
+			console.log('myFunction is working');
+			$('#myForm input, #myForm select, #myForm textarea').each(
+
+			    function(index){  
+			    	console.log('each');
+			        var input = $(this);
+			        // alert('Type: ' + input.attr('type') + 'Name: ' + input.attr('name') + 'Value: ' + input.val());
+			        obj['prop- ' + index ] = input.val();
+			    }
+			);
+
+			theConsole();
+
+		}
+
+		function theConsole(){
+			console.log(obj);
+		}
+
+
+		
+
+
+		  
+  	</script>
+
+
+
+
+</body>
+</html>
