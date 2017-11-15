@@ -3,9 +3,9 @@
   //This is click event for the form
   document.getElementById('subBtn').onclick = function(){
       // This stops the submit button from sending you to another page
-  	   event.preventDefault();
+  	  event.preventDefault();
    	
-     // this accesses the property of the form in the document object
+      // this accesses the property of the form in the document object
       var oForm = document.forms[0];
       // this accessed the elements of the form property
       var els = oForm.elements;
@@ -24,15 +24,14 @@
           };
           
           values = valuesPlease;
-          console.log(values);
           return valuesPlease; 
          
 
   	}
 
 
-  // This function changes the image of the card by using an if else statement
-  // dependent on the value that is chosen
+    // This function changes the image of the card by using an if else statement
+   // dependent on the value that is chosen
    function changeImage(){
      var myImage = document.getElementsByTagName('img');
 
@@ -51,7 +50,7 @@
     }
 
    	 // This function changes the background colour of the card by using an if else statement
-  // dependent on the value that is chosen
+    // dependent on the value that is chosen
     function changeColour(){
   	   var myColour = document.getElementsByClassName('card');
 
