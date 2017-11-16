@@ -15,21 +15,18 @@
       // this function loops through the elements on the form
       // and pushes them into the empty array. the variable values is
       // then set to equal that array
-      function loopFormEls(elements){
+      function loopEls(elements){
           //An empty array to push the values into
-          var valuesPlease = [];
+          var valuesNew = [];
           // loops through the form elements and gets their values
           for (var i = 0; i < elements.length; i++) {
-              valuesPlease.push(elements[i].value);
+              valuesNew.push(elements[i].value);
           };
           
-          values = valuesPlease;
-          return valuesPlease; 
+          values = valuesNew;
+          return valuesNew; 
          
-
   	}
-
-
     // This function changes the image of the card by using an if else statement
    // dependent on the value that is chosen
    function changeImage(){
@@ -48,7 +45,6 @@
            console.log('break');
        }
     }
-
    	 // This function changes the background colour of the card by using an if else statement
     // dependent on the value that is chosen
     function changeColour(){
@@ -67,9 +63,8 @@
              console.log('break');
          }
     }
-
   	 // This function changes the font of the card by using an if else statement
-  // dependent on the value that is chosen
+   // dependent on the value that is chosen
     function changeFont(){
   	   var myFont = document.getElementsByTagName('h1');
 
@@ -113,13 +108,10 @@
     	var text = document.getElementsByTagName('h1');
       var valuesSix = values[5];
 
-      text[0].textContent = valuesSix;
-
-
-    	
+      text[0].textContent = valuesSix;	
     }
       //These invoke all the functions
-   	   loopFormEls(els);
+   	   loopEls(els);
    	    changeImage();
    	    changeColour();
    	    changeFont();

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+
+	<div id="showData"></div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+
+	var items = [];
+
+	var showData = $('#showData');
+
+	$.getJSON( "https://jsonplaceholder.typicode.com/users", function( data ) {
+			console.log(data);
+			for (var i = 0; i < data.length; i++) {
+				items.push(data[i].name);
+			};
+
+	}).done(function() {
+			populateHTML();
+	});
+
+	function populateHTML(){
+  			if (items.length) {
+  			  var content = '<li>' + items.join('</li><li>') + '</li>';
+  			  var list = $('<ul />').html(content);
+  			  showData.append(list);
+  			}
+  		}
+	
+	</script>
+	
+</body>
+</html>

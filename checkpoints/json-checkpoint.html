@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	
+</head>
+<body>
+
+     <table class="striped" id="showData">
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>City</th>
+              <th>Username</th>
+          </tr>
+        </thead>
+    </table>
+
+       
+
+
+     
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<script>
+
+	var items = [];
+
+	var showData = $('#showData');
+
+	$.getJSON( "https://jsonplaceholder.typicode.com/users", function( data ) {
+			console.log(data);
+			for (var i = 0; i < data.length; i++) {
+				items.push(data[i].name);
+
+				
+			};
+			console.log(items);
+	}).done(function() {
+			populateHTML();
+	});
+
+	function populateHTML(){
+  			if (items.length) {
+  			  var content = '<tbody>' + items.join('</td><td>') + '</dd>';
+  			  var list = $('<tr>').html(content);
+  			  showData.append(list);
+  			}
+  		}
+
+
+
+
+	</script>
+	
+</body>
+</html>
