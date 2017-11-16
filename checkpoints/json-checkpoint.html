@@ -4,11 +4,13 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<style>
 	
+	</style>
 </head>
 <body>
 
-     <table class="striped" id="showData">
+     <table class="highlight" id="showData">
         <thead>
           <tr>
               <th>Name</th>
@@ -28,28 +30,41 @@
 	<script>
 
 	var items = [];
+	var items2 = [];
 
 	var showData = $('#showData');
 
 	$.getJSON( "https://jsonplaceholder.typicode.com/users", function( data ) {
 			console.log(data);
 			for (var i = 0; i < data.length; i++) {
-				items.push(data[i].name);
-
-				
+				items.push(data[i].name);	
 			};
-			console.log(items);
+			for (var i = 0; i < data.length; i++){
+				items2.push(data[i].username);
+			}
+			console.log(items2);
 	}).done(function() {
 			populateHTML();
+			populateHTML2();
 	});
 
 	function populateHTML(){
   			if (items.length) {
-  			  var content = '<tbody>' + items.join('</td><td>') + '</dd>';
+  			  var content = '<td>' + items.join('</td><td>') + '</td>';
   			  var list = $('<tr>').html(content);
-  			  showData.append(list);
+  			  showData.prepend(list);
   			}
+  			console.log(list);
   		}
+
+	function populateHTML2(){
+		if (items2.length) {
+		  var content = '<td>' + items2.join('</td><td>') + '</td>';
+		  var list = $('<tr>').html(content);
+		  showData.append(list);
+		}
+		console.log(list);
+	}
 
 
 
