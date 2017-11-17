@@ -5,6 +5,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<style>
+
 	
 	</style>
 </head>
@@ -17,7 +18,15 @@
               <th>City</th>
               <th>Username</th>
           </tr>
-        </thead>
+      </thead>
+        <tbody> 
+	      <tr>
+	          <td></td>
+	          <td></td>
+	          <td></td>
+	      </tr>
+        </tbody>
+       
     </table>
 
        
@@ -45,29 +54,23 @@
 			console.log(items2);
 	}).done(function() {
 			populateHTML();
-			populateHTML2();
+			
 	});
 
 	function populateHTML(){
   			if (items.length) {
-  			  var content = '<td>' + items.join('</td><td>') + '</td>';
+  			  var content = '<td>' + items.join('</td><td>') + '<td>';
   			  var list = $('<tr>').html(content);
   			  showData.prepend(list);
+
+  			  var content = '<td>' + items2.join('</td><td>') + '</td>';
+		  	  var list = $('<tr/>').html(content);
+		      showData.append(list);
   			}
-  			console.log(list);
+  			console.log(content);
   		}
 
-	function populateHTML2(){
-		if (items2.length) {
-		  var content = '<td>' + items2.join('</td><td>') + '</td>';
-		  var list = $('<tr>').html(content);
-		  showData.append(list);
-		}
-		console.log(list);
-	}
-
-
-
+	
 
 	</script>
 	
