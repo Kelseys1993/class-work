@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	
+	.container{
+		position:relative;
+		width: 620px;
+		margin: 0 auto;
+		
+	}
+	.box1{
+		position: absolute;
+	}
+	
+	.box2{
+	position: absolute;
+	display: none;
+	
+	}
+	.box3{
+	position: absolute;
+	display: none;
+	
+	}
+	
+
+	</style>
+</head>
+<body>
+	<div class='container' id='lists'>
+		<div id='showData'class='box1'>
+			<h2>Name</h2>
+		</div>
+		<div id='showData2' class='box2'>
+			<h2>Username</h2>
+		</div>
+		<div id='showData3' class='box3'>
+			<h2>City</h2>
+		</div>
+	</div>
+<button id='change'>Next List</button>
+	<button id='order'>Change Order</button>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+
+		var items = [];
+		var items2 = [];
+		var items3 = [];
+
+		var showData = $('#showData');
+		var showData2 = $('#showData2');
+		var showData3 = $('#showData3');
+		var changeBtn = document.getElementById('change');
+		var orderBtn = document.getElementById('order');
+		var lElems = document.querySelectorAll('#lists>div');
+		// changeBtn.addEventListener('click', next, false);
+		// orderBtn.addEventListener('click', organise, false);
+		items.pop();
+  		console.log(items);
+
+
+		$.getJSON( "https://jsonplaceholder.typicode.com/users", function( data ) {
+				console.log(data);
+				for (var i = 0; i < data.length; i++) {
+					items.push(data[i].name);
+				};
+
+				for (var i = 0; i < data.length; i++) {
+					items2.push(data[i].username);
+				};
+
+				for (var i = 0; i < data.length; i++) {
+					items3.push(data[i].address.city);
+				};
+
+	}).done(function() {
+			populateHTML();
+	});
+
+	function populateHTML(){
+  			if (items.length) {
+  			  var content = '<li>' + items.join('</li><li>') + '</li>';
+  			  var list = $('<ul />').html(content);
+  			  showData.append(list);
+  			}
+  			if (items.length) {
+  			  var content = '<li>' + items2.join('</li><li>') + '</li>';
+  			  var list = $('<ul />').html(content);
+  			  showData2.append(list);
+  			}
+  			if (items.length) {
+  			  var content = '<li>' + items3.join('</li><li>') + '</li>';
+  			  var list = $('<ul />').html(content);
+  			  showData3.append(list);
+  			}
+  		}
+  			
+	// function next() {
+	    
+	//     for (var i = 0; i < lElems.length; i++) {
+	//         if (lElems[i].style.display != 'none') {
+	//             lElems[i].style.display = 'none';
+	//             if (i == lElems.length - 1) {
+	//                 lElems[0].style.display = 'block';
+	//             } else {
+	//                 lElems[i + 1].style.display = 'block';
+	//             }
+	//             break;
+	//        	}
+	//     }      
+	// }
+
+
+	// function organise(){
+	// 	 for (var i = 0; i < lElems.length; i++) 
+	// 	 if (lElems[i].style.display === 'block') {
+	// 		    items.shift();
+	// 		}
+	// 	}
+			
+
+	</script>
+	
+</body>
+</html>
