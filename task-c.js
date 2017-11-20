@@ -11,8 +11,10 @@ var theArray = [false, 'adam', 'sam', 15, 'bob', 'john', 9000, 'tupac', 'biggie'
 // *** Extra for the courageous:
 // Have the same function Punctuate the firs letter of each name. 
 function cleanArray(arr){
-	arr.filter(typeof "string");
-	return arr
+	arr.filter(item => typeof item === "string");
+	arr.push('billy');
+	arr.sort();
 }
 
-console.log(cleanArray(theArray));
+cleanArray(theArray);
+console.log(theArray);
