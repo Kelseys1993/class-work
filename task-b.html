@@ -58,17 +58,22 @@
 		var changeBtn = document.getElementById('change');
 		var orderBtn = document.getElementById('order');
 		var lElems = document.querySelectorAll('#lists>div');
-		// changeBtn.addEventListener('click', next, false);
-		// orderBtn.addEventListener('click', organise, false);
-		items.pop();
-  		console.log(items);
-
+		changeBtn.addEventListener('click', next, false);
+		orderBtn.addEventListener('click', organise, false);
+	
 
 		$.getJSON( "https://jsonplaceholder.typicode.com/users", function( data ) {
 				console.log(data);
 				for (var i = 0; i < data.length; i++) {
 					items.push(data[i].name);
 				};
+				items.sort(function(a, b){
+				    if(a < b) return -1;
+				    if(a > b) return 1;
+				 
+				    return 0;
+				})
+
 
 				for (var i = 0; i < data.length; i++) {
 					items2.push(data[i].username);
@@ -82,12 +87,14 @@
 			populateHTML();
 	});
 
+
 	function populateHTML(){
   			if (items.length) {
   			  var content = '<li>' + items.join('</li><li>') + '</li>';
   			  var list = $('<ul />').html(content);
   			  showData.append(list);
   			}
+  			
   			if (items.length) {
   			  var content = '<li>' + items2.join('</li><li>') + '</li>';
   			  var list = $('<ul />').html(content);
@@ -100,28 +107,32 @@
   			}
   		}
   			
-	// function next() {
+	function next() {
 	    
-	//     for (var i = 0; i < lElems.length; i++) {
-	//         if (lElems[i].style.display != 'none') {
-	//             lElems[i].style.display = 'none';
-	//             if (i == lElems.length - 1) {
-	//                 lElems[0].style.display = 'block';
-	//             } else {
-	//                 lElems[i + 1].style.display = 'block';
-	//             }
-	//             break;
-	//        	}
-	//     }      
-	// }
+	    for (var i = 0; i < lElems.length; i++) {
+	        if (lElems[i].style.display != 'none') {
+	            lElems[i].style.display = 'none';
+	            if (i == lElems.length - 1) {
+	                lElems[0].style.display = 'block';
+	            } else {
+	                lElems[i + 1].style.display = 'block';
+	            }
+	            break;
+	       	}
+	    }      
+	}
 
 
-	// function organise(){
-	// 	 for (var i = 0; i < lElems.length; i++) 
-	// 	 if (lElems[i].style.display === 'block') {
-	// 		    items.shift();
-	// 		}
-	// 	}
+	function organise(){
+	for (var i = 0; i < items.length; i++) {
+		 items.sort(function(a, b){
+				    if(a < b) return -1;
+				    if(a > b) return 1;
+				 
+				    return 0;
+				})
+		}
+		}
 			
 
 	</script>

@@ -10,3 +10,9 @@ var theArray = [false, 'adam', 'sam', 15, 'bob', 'john', 9000, 'tupac', 'biggie'
 
 // *** Extra for the courageous:
 // Have the same function Punctuate the firs letter of each name. 
+function cleanArray(arr){
+	arr.filter(typeof "string");
+	return arr
+}
+
+console.log(cleanArray(theArray));
