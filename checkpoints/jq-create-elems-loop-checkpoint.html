@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<style>
+			div {
+						height: 4em;
+						background-color: blue;
+						border: 1px solid black;
+						width: 40%;
+						margin: 1em;
+						border-radius: 4px;
+						padding: 1.2em;
+						font-size: 2em;
+					}
+			.bret {
+				background-color: green;
+
+			}
+			.antonette{
+				background-color: #fff100;
+			}
+			.samantha{
+				background-color: #570095;
+			}
+			.karianne{
+				background-color: #1d80a5;
+			}
+			.kamren{
+				background-color: #acacd9;
+			}
+			.leopoldo_corkery{
+				background-color: #ff5f00;
+			}
+			.elwyn.skiles{
+				background-color: #6878cc
+			}
+			.maxime_nienow{
+				background-color: #77dd7e;
+			}
+			.delphine{
+				background-color: #610000;
+			}
+			.moriah.stanton{
+				background-color: #fff100;
+			}
+		</style>
+</head>
+<body>
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+
+	var names = [];
+	var users = [];
+	var emailAdd = [];
+	var cssClassName = [];
+
+	$.getJSON( "https://jsonplaceholder.typicode.com/users", function( data ) {
+		console.log(data);
+			for (var i = 0; i < data.length; i++) {
+				names.push(data[i].name);
+				users.push(data[i].username);
+				emailAdd.push(data[i].email);
+
+	};
+
+	}).done (function(){
+		newDiv();
+		
+		
+	});	  
+
+	function newDiv(){ 
+
+	  	$.each(users, function( index, value ) {
+
+			var cssValue = value.toLowerCase();
+			cssClassName.push(cssValue);
+		});
+
+		$.each( names,  function( index, value ) {
+
+				  $('body').append(
+				    $('<div/>')
+				      // .attr("id", "newDiv1")
+				      .addClass("newDiv " + cssClassName[index])
+				      .append("<span/>")
+				        .text(value + ' ' + emailAdd[index] )
+					);
+			});
+		}
+	
+
+	
+	console.log(names);
+	console.log(cssClassName);
+	
+	
+
+	</script>
+	
+</body>
+</html>

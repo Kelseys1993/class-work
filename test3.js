@@ -1,7 +1,7 @@
 // Create one function that takes theArray as an argument then completes steps
 // 1 - 2 - 3 and returns the result/processed array
 
-var theArray = [false, 'adam', 'sam', 15, 'b.o.b', 'john', 9000, 'tupac', 'biggie', 'george', 'tony', 22];
+var theArray = [false, 'adam', 'sam', 15, 'bob', 'john', 9000, 'tupac', 'biggie', 'george', 'tony', 22];
 
 
 
@@ -11,25 +11,17 @@ var theArray = [false, 'adam', 'sam', 15, 'b.o.b', 'john', 9000, 'tupac', 'biggi
 
 // *** Extra for the courageous:
 // Have the same function Punctuate the first letter of each name. 
-var stringArrayA = clearArray(theArray);
+var stringArray = clearArray(theArray);
 function clearArray(array){
-	var stringArrayB =[];
+	var stringArray =[];
 
 	for(i = 0; i < array.length; i++){
 		if(typeof array[i] === 'string'){
-			stringArrayB.push(array[i]);
+			stringArray.push(array[i]);
 		}
 	}
-	stringArrayB.push('billy');
-	stringArrayB.sort();
-
-	for(i = 0; i < stringArrayB.length; i++){
-		stringArrayB[i] = stringArrayB[i].charAt(0).
-		toUpperCase() + stringArrayB[i].slice(1);
-	}
-
-
-	return stringArrayB
+	stringArray.push('billy');
+	stringArray.sort();
 }
 
-console.log(stringArrayA);
+console.log(stringArray);
